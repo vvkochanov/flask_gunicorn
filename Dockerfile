@@ -31,7 +31,7 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY gunicorn.conf /etc/supervisor/conf.d/gunicorn.conf
 
 # Gunicorn installation
-RUN pip install gunicorn==$GUNICORN_VERSION gevent==$GEVENT_VERSION
+RUN pip install gunicorn==$GUNICORN_VERSION gevent==$GEVENT_VERSION cx-Oracle psycopg2
 
 # Gunicorn default configuration
 COPY gunicorn.config.py /app/gunicorn.config.py
